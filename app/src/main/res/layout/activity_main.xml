@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#000000"
+    android:weightSum="15"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/DisplayScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:layout_gravity="center"
+        android:gravity="bottom|end"
+        android:layout_marginBottom="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="4" >
+
+        <Button
+            android:id="@+id/ClearScreenButton"
+            android:layout_width="0dp"
+            android:layout_height= "75dp"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="5sp"
+            android:layout_weight="1"
+            android:background="@drawable/circular_button_gray"
+            android:layout_gravity="center"
+            android:text="AC"
+            android:onClick="ClearScreen"
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_gray"
+            android:layout_gravity="center"
+            android:text="clear"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:onClick="DeleteOneNumber"
+            />
+
+        <Button
+            android:id="@+id/ModulusButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_gray"
+            android:layout_gravity="center"
+            android:text="%"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/DivisionButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="2sp"
+            android:background="@drawable/circular_button_orange"
+            android:layout_gravity="center"
+            android:text="÷"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="4"
+        android:layout_marginTop="5sp">
+
+        <Button
+            android:id="@+id/Number7Button"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_weight="1"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="7"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/Number8Button"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="8"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/Number9Button"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/MultiplicationButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="2sp"
+            android:background="@drawable/circular_button_orange"
+            android:layout_gravity="center"
+            android:text="x"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="4"
+        android:layout_marginTop="5sp">
+
+        <Button
+            android:id="@+id/Number4Button"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_weight="1"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/Number5Button"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="5"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/Number6Button"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="6"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/AbstractionButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="2sp"
+            android:background="@drawable/circular_button_orange"
+            android:layout_gravity="center"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="4"
+        android:layout_marginTop="5sp">
+
+        <Button
+            android:id="@+id/Number1Button"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_weight="1"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/Number2Button"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/Number3Button"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/AdditionButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="2sp"
+            android:background="@drawable/circular_button_orange"
+            android:layout_gravity="center"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="4"
+        android:layout_marginTop="5sp">
+
+        <Button
+            android:id="@+id/OtherOperators"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="0.75"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="Other"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="showOtherOperations"/>
+
+        <Button
+            android:id="@+id/PlusMinusButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="0.75"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="±"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="AddMinus"/>
+
+        <Button
+            android:id="@+id/Number0Button"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_weight="0.75"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/DotButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="0.75"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/EqualButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginRight="2sp"
+            android:background="@drawable/circular_button_orange"
+            android:layout_gravity="center"
+            android:text="="
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="Calculate"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mathFunctionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:weightSum="4"
+        android:layout_marginTop="5sp">
+
+        <Button
+            android:id="@+id/SinButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1.33"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="Sin"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/CosButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1.33"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="Cos"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/TanButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_weight="1.33"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="Tan"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mathFunctionsLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:weightSum="4"
+        android:layout_marginTop="5sp">
+
+        <Button
+            android:id="@+id/SquareRootButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1.33"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="√"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/SquareButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1.33"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="x^y"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/LogButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_weight="1.33"
+            android:background="@drawable/circular_button_black"
+            android:layout_gravity="center"
+            android:text="Log"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:onClick="onClick"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
